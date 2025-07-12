@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Program Specifications</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta name="Author" content="Çağrı Camcıoğlu (Cagri Camcioglu)">
+<style type="text/css">
+<!--
+body {
+SCROLLBAR-FACE-COLOR: #009797; SCROLLBAR-HIGHLIGHT-COLOR: #00FFFF;
+SCROLLBAR-SHADOW-COLOR: #000080; SCROLLBAR-3DLIGHT-COLOR: #00FFFF;
+SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #006575;
+SCROLLBAR-DARKSHADOW-COLOR: #000080;
+     }
+body,td,th {
+	font-family: Times New Roman, Times, serif;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+<body bgcolor="#000000" text="#009797">
+<p><a name="Rules"></a><br>
+  ---------- <font color="#00FFFF">Program Usage and Rules </font> ---------- </p>
+<p>[<font color="#00FFFF">General</font>] </p>
+<p><img src="dot.gif" width="10" height="10" border="0" hspace="4">There are 
+  two modes, called as &quot;Editor Mode&quot; and &quot;Debugger Mode&quot;. 
+  Editor mode related functions run only within editor mode, and, debugger mode 
+  related functions run only within debugger mode. For example, such as 'cut', 
+  'copy' and 'paste' commands run only within editor mode; and, such as 'run', 
+  'run here' and 'trace into' commands, run only within debugger mode. <br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Options menus 
+  related to these modes run every time, but, applying the changes instantly is 
+  not possible. The changes can be applied only within the related mode.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">There are five 
+  utilities under &quot;Tools Menu&quot;. These can be run in either mode. These 
+  are, briefly:</p>
+<table border="1" width="697">
+  <tr bgcolor="#CCCCCC">
+    <td><font color="#000000">Program</font></td>
+    <td><font color="#000000">Explanation</font></td>
+  </tr>
+  <tr>
+    <td>Ascii Table</td>
+    <td>This is a 16-bit assebmly based program that shows the ascii codes in 
+      a dos window. </td>
+  </tr>
+  <tr>
+    <td>Base Converter</td>
+    <td>This is a program which makes the conversions between the base systems.</td>
+  </tr>
+  <tr>
+    <td>Character Map</td>
+    <td>This is a standart Windows program which shows the font characters.</td>
+  </tr>
+  <tr>
+    <td>Hex Calculator</td>
+    <td>This is a small hexadecimal calculator.</td>
+  </tr>
+  <tr>
+    <td>Scan Codes</td>
+    <td>This is a 16-bit assebmly based program that shows the keyboard scan codes 
+      in a dos window. </td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+<p>[<font color="#00FFFF">Editor Mode</font>]</p>
+<p><img src="dot.gif" width="10" height="10" border="0" hspace="4">Context 
+  sensitive help appears at the status bar while you moving the mouse pointer 
+  over the controls.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  comment on a line which begins with a &quot;;&quot;. These comments must be 
+  placed on a single line or AFTER any instruction.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Using of spaces, 
+  at the beginning and end of lines and between the commands, is allowed.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Compiler looks 
+  for register pairs as &quot;BC&quot;, &quot; DE&quot; and &quot;HL&quot;, not 
+  as &quot;B&quot;, &quot;D&quot; or &quot;H&quot; as one letter.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can place 
+  your labels on a single line or before the instruction, ending with a colon. 
+  For example, &quot; MyLabel:&quot;. The colon must be placed just after the 
+  label name.!<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  labels as 16-bit offset addresses. For example, if there is label named &quot;DataAddr&quot;, 
+  then you can write a command like &quot;lxi hl,DataAddr&quot;, &quot;sta DataAddr&quot;, 
+  or, &quot;shld DataAddr&quot;.</p>
+<p><i><font color="#00FFFF">Directives:<br>
+  </font></i><img src="dot.gif" width="10" height="10" border="0" hspace="4">You 
+  can use &quot;Org Addr&quot; (origin) directive. This directive allows you to 
+  place your code, beginning of any offset address you want.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  &quot;KickOff Addr&quot; directive to state the initial code entry offset. If 
+  there is no KickOff directive in the program at all, the code entry offset will 
+  be the default value specified in the &quot;Debugger Options Menu&quot;.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  &quot;Db&quot; (define byte) directive. This directive allows you to insert 
+  count of bytes and a string directly into your code. For example, &quot;Db 13,10,'This 
+  is a sample text ...',13,10,24h&quot;.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  &quot;FillByte count,byte&quot; directive to insert (count) number of (byte) 
+  into memory from beginning of current offset. Alternatively, you can use this 
+  directive as, &quot; FillByte count,'char' &quot;. <br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">You can use 
+  &quot;FillByteStep count,start,step,direction&quot; directive to insert (count) 
+  number of bytes from starting (start), stepping by (step) and to a (direction) 
+  'Up' or 'Down', into memory from beginning of current offset. For example, &quot; 
+  FillByteStep 4,3,2,'Up' &quot;. This directive tells compiler to insert byte 
+  sequence [3,5,7,9] into memory. Alternatively, you can use this directive as, 
+  &quot; FillByteStep count,'char',step,direction &quot;. </p>
+<p>&nbsp;</p>
+<p>[<font color="#00FFFF">Debugger Mode</font>]</p>
+<p><img src="dot.gif" width="10" height="10" border="0" hspace="4">Context 
+  sensitive help appears at the status bar while you moving the mouse pointer 
+  over the panes.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Code pane shows 
+  memory content as both hexadecimal and instruction based with their offset addresses.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Data pane shows 
+  memory content as both hexadecimal and character based with their offset addresses.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Register pane 
+  shows the content of all registers and the content of memory location pointing 
+  by HL register pair.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Flag pane shows 
+  the content of flag register as both a byte and individual bits.<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">Stack pane shows 
+  the &plusmn; 5 words (totally 11) in memory, originated at SP register. The 
+  low order byte of the word is the [SP] and the high order byte of the word is 
+  the [SP+1].<br>
+  <img src="dot.gif" width="10" height="10" border="0" hspace="4">There is a port 
+  view form which is available in debugger mode only. With this form, you can 
+  inspect the contents of the ports and also you can change them bit by bit.</p>
+<p>&nbsp;</p>
+<p><a name="Keyboard"></a><br>
+  ---------- <font color="#00FFFF">Keyboard Hot Keys</font> ----------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;All the short-cuts related to the items and functions 
+  in either mode in program are shown in the main menu. Also, there are some short-cuts 
+  which are not shown in the main menu. These keys have functionality only in 
+  debugger mode and can be learned from status bar by holding down the &quot;Ctrl&quot; 
+  or &quot;Shift&quot; keys. For example, &quot;Shift+O&quot; goes to current 
+  PC, &quot;Shift+A&quot; goes to specified address, &quot;Ctrl+Backspace&quot; 
+  makes undo, &quot;Ctrl+left/right Arrows&quot; changes the current pane, etc.</p>
+<p>&nbsp; </p>
+</body>
+</html>

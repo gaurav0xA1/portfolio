@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Sim8085&reg; Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta name="Author" content="Çağrı Camcıoğlu (Cagri Camcioglu)">
+<style type="text/css">
+<!--
+body {
+SCROLLBAR-FACE-COLOR: #009797; SCROLLBAR-HIGHLIGHT-COLOR: #00FFFF;
+SCROLLBAR-SHADOW-COLOR: #000080; SCROLLBAR-3DLIGHT-COLOR: #00FFFF;
+SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #006575;
+SCROLLBAR-DARKSHADOW-COLOR: #000080;
+     }
+body,td,th {
+	font-family: Times New Roman, Times, serif;
+	font-weight: bold;
+}
+-->
+</style>
+<script language="JavaScript">
+<!--
+
+function CheckResolution()
+ {
+  var LowRes=false;
+
+  BrowserName=navigator.appName;
+  BrowserVersion=parseInt(navigator.appVersion);
+  if ((BrowserName == "Netscape" && BrowserVersion >= 4) || (BrowserName == "Microsoft Internet Explorer" && BrowserVersion >= 4))
+   {
+    if ((screen.width < 1024) || (screen.height < 768)) LowRes = true;
+   }
+  else if (BrowserName == "Netscape" && BrowserVersion >= 3)
+        {
+         var ToolKit = java.awt.Toolkit.getDefaultToolkit();
+         var ScreenSize = ToolKit.getScreenSize();
+
+         if ((ScreenSize.width < 1024) || (ScreenSize.height < 768))
+          {
+           LowRes = true;
+          }
+        }
+       else LowRes = true;
+
+  if (LowRes == true) window.open('all_frames_float.htm','8085Help','scrollbars=yes,resizable=yes,width=980,height=450');
+  else window.open('all_frames_normal.htm','8085Help','scrollbars=yes,resizable=yes,width=980,height=500');
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#000000" text="#009797" onLoad="CheckResolution()">
+<div align="center">
+  <p><font color="#00FFFF" size="4"> Welcome to Sim8085</font><font color="#00FFFF" size="3" face="MS Serif"><sup>&reg;</sup></font><font color="#00FFFF" size="4"> Help Pages ...</font><br>
+  </p>
+</div>
+<p>There are some alternative ways to display the help pages, please choose
+  one of them which suits to you:</p>
+<ol>
+  <li>
+    <input type="button" name="Normal" value="Open" onClick=window.open('all_frames_normal.htm')>
+    <font color="#6666FF">Normal view:</font> Standart browser window is displayed;
+    required resolution is 1024x768.</li>
+  <li>
+    <input type="button" name="Simple" value="Open" onClick=window.open('all_frames_normal.htm','8085Help','scrollbars=yes,resizable=yes,width=980,height=500')>
+    <font color="#6666FF"> Simplified view:</font> In this mode, browser window
+    has only the page area. But, required resolution is again 1024x768.</li>
+  <li>
+    <input type="button" name="Float" value="Open" onClick=window.open('all_frames_float.htm')>
+    <font color="#6666FF">Float mode:</font> With this mode, menu applet can
+    be shown in a seperate window. So, required resolution is less than others:
+    800x600.</li>
+  <li>
+    <input type="button" name="SimpleFloat" value="Open" onClick=window.open('all_frames_float.htm','8085Help','scrollbars=yes,resizable=yes,width=980,height=450')>
+    <font color="#6666FF">Simplified Float mode:</font> This mode is combination
+    of Float mode and Simplified mode. </li>
+</ol>
+<p>While loading the page, the window mode is selected automatically according
+  to the current screen resolution. If you wanna change this or if something is
+  wrong, then click the buttons above.<br>
+</p>
+<hr width="100%">
+<font color="#99CCFF">This help is written by the author, CopyLeft &copy;2007
+...   ;-)</font>
+</body>
+</html>

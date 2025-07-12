@@ -1,0 +1,12 @@
+ org 2000h
+ mvi a, 32h
+ sta 2015h
+ add a
+ sta 2016h
+ lxi de, 2015h
+ lxi bc, 2018h
+ ldax de
+ stax bc
+ sta  2019h
+ hlt
+

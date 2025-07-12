@@ -1,0 +1,32 @@
+KickOff 2000h     ;This is where the control will first transferred 
+Org 1000h         ;Code entry point
+
+Db 13,10,'This is a sample text...',13,10
+FillByte 5,41h    ; = 41h,41h,41h,41h,41h   
+FillByteStep 10,'a',2,'Up'
+
+Org 2000h         ;Code entry point
+
+  lxi hl,2070h
+  lxi bc,2090h
+  
+lb1:
+  mov a,m
+  cpo 0Dh
+  jz exit
+  cpi 30h
+  jc next
+  cpi 39h
+  jnc next
+  stax bc
+  inx bc
+
+next: 
+  inx hl
+  jmp lb1
+  
+exit:
+  hlt
+
+Org 2070h
+Db 35h,2Fh,30h,39h,3Ah,37h,7Fh,31h,0Dh,32h,13h

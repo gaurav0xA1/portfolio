@@ -1,0 +1,16 @@
+ ; Just watch the LED's displaying all possible combinations.For this, in the debug mode,
+ ; you have to see the port status.(press Ctrl-Alt-P or select it from Tools menu)
+
+KickOff 100h
+Org 100h
+
+ mvi a,01h
+ out 20h  ;program the control word of the ports, A port as output
+ mvi a,00h
+
+loop:
+ out 21h
+ inr a
+ jmp loop
+
+

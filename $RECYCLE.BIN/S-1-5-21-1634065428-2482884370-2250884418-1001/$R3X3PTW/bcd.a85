@@ -1,0 +1,31 @@
+; To perform the following code conversion
+; Binary to BCD
+
+Org 100h
+  lxi sp,100h
+  lxi hl,500h
+  mov a,m
+  lxi hl,200h
+  call 1500h
+  hlt
+
+Org 500h
+Db 114
+
+Org  1500h
+  mvi  b,64h
+  call bcdbin
+  mvi  b,0Ah
+  call bcdbin
+  mov  m,a
+  ret
+
+bcdbin:
+  mvi m,0FFh
+  inr m
+  sub b
+  jnc bcdbin
+  add b
+  inx hl
+  ret
+

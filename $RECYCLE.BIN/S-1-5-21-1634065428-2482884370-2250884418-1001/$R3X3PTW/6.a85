@@ -1,0 +1,31 @@
+ ; multiplication by shift and add
+
+KickOff 100h ; Program entry point
+Org 100h ; This is where the control is first transferred
+
+  lxi sp,200
+  lxi hl,MlTpLy
+  xchg
+  call mltply
+  hlt
+
+Org 130h
+mltply:
+  mov a,d
+  lxi hl,0
+  mvi d,00
+  mvi b,8
+
+nxtbit:
+  rar
+  jnc noadd
+  dad de
+
+noadd:
+  xchg
+  dad hl
+  xchg
+  dcr b
+  jnz nxtbit
+  ret
+

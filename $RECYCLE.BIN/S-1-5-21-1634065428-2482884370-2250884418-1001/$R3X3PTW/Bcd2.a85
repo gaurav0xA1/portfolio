@@ -1,0 +1,85 @@
+ ; convert BCD number to binary
+
+   ORG 100h
+   main:
+            lxi  hl,5050h
+            lxi  hl,250h
+            lxi  sp,250h
+            mov  a,m
+            call binary2bcd
+            hlt
+ ;--------------------------------------------------
+   bcd2bin:
+            mov  a,m
+            ani  0f0h  ;  extract 4 most significant bits
+            rrc
+            rrc
+            rrc
+            rrc       
+            mvi  b,10
+            call multply  ; a=a*10
+            mov  b,a
+            mov  a,m
+            ani  0fh   ; extract least significant 4 bits
+            add  b
+            inx  hl
+            mov  m,a
+            ret
+ ;--------------------------------------------------
+   binary2bcd:
+              mvi  b,64h
+              call binbcd
+              mvi  b,0Ah
+              call binbcd
+              mov m,a
+              ret
+
+   binbcd:    mvi m,0ffh
+   binloop:   inr m
+              sub b
+              jnc binloop
+              add b          ; negate the one extra subtraction
+              inx hl
+              ret
+
+ ;--------------------------------------------------
+
+org 250h
+
+FillByte 36h,2     ;write 36h two times from offset 250h
+
+ ;--------------------------------------------------
+
+    org 1000h
+
+    multply:
+            ; subroutine to multiply two numbers
+            ; a = a*b
+            push bc
+            dcr  b
+            mov  c,a
+            jz   end   ; nothing to do
+   loop:    add  c
+            dcr  b
+            jnz  loop
+   end:     pop  bc  ; restore contents of b
+            ret
+ ;--------------------------------------------------
+   divide:
+            ; subroutine to divide two numbers
+            ; a = a/b
+            cpi 0
+            jz enddivide
+            push bc
+            mvi  c,0
+   loop2:   inr  c
+            sub  b
+            jm   enddivide
+            jmp  loop2
+ enddivide: jz   loop3
+            dcr  c
+ loop3:     mov  a,c
+            pop  bc
+            ret
+ ;--------------------------------------------------
+
