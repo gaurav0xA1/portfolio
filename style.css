@@ -227,6 +227,15 @@ footer {
         padding: 0 20px;
     }
 
+@media (max-width: 768px) {
+  .projects a.card:nth-of-type(n + 4) {
+    display: none;
+  }
+}
+
+
+    
+
     .nav-links {
         position: fixed;
         top: 60px;
@@ -257,4 +266,31 @@ footer {
     .stack-grid {
         gap: 1rem;
     }
+}
+
+.show-more-btn {
+  display: none;  /* hidden by default */
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  background-color: #222;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: block; /* we'll override display in media query */
+  max-width: 200px;
+  text-align: center;
+}
+
+.show-more-btn:hover {
+  background-color: #555;
+}
+
+/* Show button only on mobile */
+@media (min-width: 769px) {
+  .show-more-btn {
+    display: none !important;
+  }
 }
