@@ -2,110 +2,138 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>anupbhattarai - portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anup Bhattarai - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  
-  <div class="container">
-    <header>
-      <h1>Anup Bhattarai</h1>
-      <p>CS Student • Web Developer • Tech Enthusiast</p>
-      <h2 class="description">About me</h2>
-      <p>Creative and detail-oriented CSIT student skilled in Figma, Photoshop, and Canva, with a growing interest in
-        UI/UX and web design.
-        Strong communication and visual skills; currently learning HTML, CSS, and JavaScript. Open to remote or hybrid
-        design opportunities.
-      </p>
-      <div class="cv">
-        <a href="cv.pdf" target="_blank">View CV</a>
-      </div>
-    </header>
 
-    <main>
-<section class="tech-stack">
-  <h2>Tech-Stack</h2>
-  <div class="stack-grid">
-    <div class="stack-item">
-      <i class="devicon-cplusplus-plain colored"></i>
-      <p>C++</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html" class="logo">&alpha;
+                </a></div>
+            <button class="menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <header class="description">
+            <h1>Anup Bhattarai</h1>
+            <p class="short-brief">CS Student • Web Developer • Tech Enthusiast</p>
+            <h2>About Me</h2>
+            <p>
+                I’m a CS student with a strong drive to turn ideas into real, working products.
+                My journey started with curiosity — now, I’m actively building fullstack apps, refining interfaces in
+                Figma, and managing code professionally with GitHub.</p>
+            <p>My goal? To be the kind of developer who ships fast, learns faster, and solves problems that actually
+                matter.</p>
+        </header>
+
+        <!-- Tech Stack -->
+        <section class="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-item">
+                    <i class="devicon-cplusplus-plain colored force-cpp"></i>
+                    <p>C++</p>
+                </div>
+                <div class="stack-item">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="stack-item">
+                    <i class="devicon-mongodb-plain colored force-mongo"></i>
+                    <p>MongoDB</p>
+                </div>
+                <div class="stack-item">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="stack-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="stack-item">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="stack-item">
+                    <i class="fab fa-node-js"></i>
+                    <p>Node.js</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects-section">
+            <h2 id="projects" class="proj-head">Projects</h2>
+            <div class="projects">
+                <a href="projects/sajha.html" class="card">
+                    <h3><i class="fas fa-bus"></i> Sajha Yatayat Tracker</h3>
+                    <p>Web app to track Sajha buses in real-time using open map APIs.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Election Portal</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> To Do List</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Calculator</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Weather Dashboard</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Typing Speed Test</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Election Portal</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+                <a href="projects/project2.html" class="card">
+                    <h3><i class="fas fa-vote-yea"></i> Election Portal</h3>
+                    <p>Mock digital election system with voter authentication and result visualization.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <h2>Contact Me</h2>
+            <div class="socials">
+                <a href="mailto:anupbhattarai46@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/anup-bhattarai-4bb3b5325/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_anupbhattarai_/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://github.com/gaurav0xA1" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Anup Bhattarai</p>
+        </footer>
     </div>
-    <div class="stack-item">
-      <i class="fab fa-python"></i>
-      <p>Python</p>
-    </div>
-    <div class="stack-item">
-      <i class="devicon-mongodb-plain colored"></i>
-      <p>MongoDB</p>
-    </div>
-    <div class="stack-item">
-      <i class="fab fa-html5"></i>
-      <p>HTML5</p>
-    </div>
-    <div class="stack-item">
-      <i class="fab fa-css3-alt"></i>
-      <p>CSS3</p>
-    </div>
-    <div class="stack-item">
-      <i class="fab fa-js-square"></i>
-      <p>JavaScript</p>
-    </div>
-    <div class="stack-item">
-      <i class="fab fa-node-js"></i>
-      <p>Node.js</p>
-    </div>
-  </div>
-</section>
 
 
-      <h2>Projects</h2>
-      <div class="projects">
-        <a href="projects/sajha.html" class="card">
-          <h3>🚌 Sajha Yatayat Tracker</h3>
-          <p>Web app to track Sajha buses in real-time using open map APIs.</p>
-        </a>
-
-        <a href="projects/project2.html" class="card">
-          <h3>🗳️ Election Portal</h3>
-          <p>Mock digital election system with voter authentication and result visualization.</p>
-        </a>
-
-        <!-- Add more projects here -->
-      </div>
-    </main>
-
-    <footer>
-
-      <h2>Contact Me</h2>
-      <div class="socials">
-        <a href="mailto:anupbhattarai46@gmail.com?subject=Website Feedback/Business Query" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/anup-bhattarai-4bb3b5325/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-
-        <a href="https://www.instagram.com/_anupbhattarai_/" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        
-          <a href="https://github.com/gaurav0xA1" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-
-      </div>
-
-      <p>&copy; 2025 Anup Bhattarai</p>
-    </footer>
-  </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
