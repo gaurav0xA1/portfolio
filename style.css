@@ -170,17 +170,56 @@ header p {
 .card {
     background-color: #111;
     border: 1px solid #333;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     text-decoration: none;
     color: #f4f4f4;
     transition: all 0.3s ease;
+    display: block;
+    height: 100%;
 }
 
 .card:hover {
     background-color: #222;
     border-color: #555;
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 15px;
+}
+
+.card-content p {
+    flex-grow: 1;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #444;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #444;
+    border-color: #666;
 }
 
 .card h3 {
@@ -269,31 +308,31 @@ footer {
 }
 
 .show-more-btn {
-  display: none;  /* hidden by default */
-  margin: 20px auto 0;
-  padding: 10px 25px;
-  background-color: #222;
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  background-color: #333;
   color: #f4f4f4;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border: 2px solid #555;
+  border-radius: 8px;
+  text-decoration: none;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
-  display: block; /* we'll override display in media query */
+  font-weight: 500;
+  transition: all 0.3s ease;
   max-width: 200px;
   text-align: center;
+  cursor: pointer;
 }
 
 .show-more-btn:hover {
   background-color: #555;
+  border-color: #777;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
-/* Show button only on mobile */
-@media (min-width: 769px) {
-  .show-more-btn {
-    display: none !important;
-  }
-}
+/* Remove the old media query that hides the button on desktop */
 
 #contact-head {
     justify-self: center;
