@@ -1,5 +1,66 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Back to Top Button logic
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // HERO TYPEWRITER EFFECT
+    const roles = [
+        { text: 'Anup Bhattarai', prefix: "I'm\u00A0" },
+        { text: 'Web Developer', prefix: 'A\u00A0' },
+        { text: 'CS Student', prefix: 'A\u00A0' },
+        { text: 'Tech Enthusiast', prefix: 'A\u00A0' },
+        { text: 'Problem Solver', prefix: 'A\u00A0' }
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+    const typewriterText = document.getElementById('typewriter-text');
+    const typewriterPrefix = document.getElementById('typewriter-prefix');
+    const TYPING_SPEED = 90;
+    const ERASING_SPEED = 40;
+    const DELAY_BETWEEN = 1200;
+
+    function typeRole() {
+        if (!typewriterText || !typewriterPrefix) return;
+        const { text, prefix } = roles[roleIndex];
+        if (typing) {
+            if (charIndex === 0) {
+                typewriterPrefix.textContent = prefix;
+            }
+            if (charIndex < text.length) {
+                typewriterText.textContent += text[charIndex];
+                charIndex++;
+                setTimeout(typeRole, TYPING_SPEED);
+            } else {
+                typing = false;
+                setTimeout(typeRole, DELAY_BETWEEN);
+            }
+        } else {
+            if (charIndex > 0) {
+                typewriterText.textContent = text.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeRole, ERASING_SPEED);
+            } else {
+                typing = true;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeRole, 400);
+            }
+        }
+    }
+    if (typewriterText && typewriterPrefix) {
+        typewriterText.textContent = '';
+        typewriterPrefix.textContent = '';
+        setTimeout(typeRole, 600);
+    }
         // Expand contact form on button click
         const expandBtn = document.getElementById('expand-contact-form');
         const contactForm = document.getElementById('inline-contact-form');

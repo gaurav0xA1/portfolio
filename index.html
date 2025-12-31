@@ -36,22 +36,45 @@
 
     <!-- Main Container -->
     <div class="container">
-        <header class="description" id="home">
-            <h1>Anup Bhattarai</h1>
-            <p class="short-brief">CS Student • Web Developer • Tech Enthusiast</p>
-            <h2>About Me</h2>
-            <p>
-                I’m a CS student with a strong drive to turn ideas into real, working products.
-                My journey started with curiosity — now, I’m actively building fullstack apps, refining interfaces in
-                Figma, and managing code professionally with GitHub.</p>
-            <p>My goal? To be the kind of developer who ships fast, learns faster, and solves problems that actually
-                matter.</p>
-            <div class="buttons">
-             <a href="cv.pdf" target="_blank">View CV</a>
-              </div>    
-        </header>
+        <!-- FULLSCREEN HERO SECTION -->
+        <section class="hero-fullscreen" id="home">
+            <div class="hero-flex">
+                <div class="hero-welcome">
+                    Hey ,<br>
+                    You found me.<br>
+                    Welcome !!!
+                </div>
+                <div class="hero-typewriter-center">
+                    <div class="hero-typewriter">
+                        <span id="typewriter-prefix"></span><span id="typewriter-text"></span><span class="typed-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Tech Stack -->
+        <!-- About Section -->
+        <section class="about-section" id="about" style="margin-top:0;">
+            <div class="about-flex about-suzan-style">
+                <div class="about-text-col about-suzan-text">
+                    <div class="about-intro-label">Let me introduce myself</div>
+                    <h2 class="about-main-heading">ABOUT ME</h2>
+                    <div class="about-main-desc">
+                        I’m a CS student with a strong drive to turn ideas into real, working products. My journey started with curiosity — now, I’m actively building fullstack apps, refining interfaces in Figma, and managing code professionally with GitHub.
+
+                        My goal? To be the kind of developer who ships fast, learns faster, and solves problems that actually matter.
+                    </div>
+                    <div class="about-btn-row">
+                        <a href="#projects" class="about-btn-row-link about-btn-row-link-white">Works</a>
+                        <a href="#" class="about-btn-row-link">View CV</a>
+                    </div>
+                </div>
+                <div class="about-img-col about-suzan-img">
+                    <img src="images/projects/photo.jpeg" alt="Anup Bhattarai" class="about-img about-img-square">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack (moved below about) -->
         <section class="tech-stack">
             <h2>Tech Stack</h2>
             <div class="stack-grid">
@@ -124,19 +147,18 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/projects/calculator.png" alt="Glassmorphic Calculator" class="project-image">
+                    <img src="images/projects/chiya-sangam.png" alt="Chiya Sangam Cafe Website" class="project-image">
                     <div class="project-actions">
-                        <a href="https://gaurav0xa1.github.io/glassmorphic-calculator/" target="_blank" class="action-btn">Live Demo</a>
-                        <a href="https://github.com/gaurav0xA1/glassmorphic-calculator" target="_blank" class="action-btn">GitHub</a>
+                        <a href="https://gaurav0xa1.github.io/chiya-sangam/" target="_blank" class="action-btn">Live Demo</a>
+                        <a href="https://github.com/gaurav0xA1/chiya-sangam" target="_blank" class="action-btn">GitHub</a>
                     </div>
                     <div class="project-content">
-                        <h3>Glassmorphic Calculator</h3>
-                        <p>A sleek, modern calculator with Apple-inspired frosted glass UI effects.</p>
+                        <h3>Chiya Sangam Cafe Website</h3>
+                        <p>Modern website for Chiya Sangam Cafe featuring menu, gallery, contact info, and an online reservation feature. Built for a seamless user experience and easy updates.</p>
                         <div class="tech-stack">
                             <span class="tech-item">HTML</span>
                             <span class="tech-item">CSS3</span>
                             <span class="tech-item">JavaScript</span>
-                            <span class="tech-item">Glassmorphism</span>
                         </div>
                     </div>
                 </div>
@@ -165,7 +187,7 @@
                                 <textarea id="message" name="message" rows="4" required></textarea>
                                 <button type="submit">Send</button>
                                 <div class="contact-alt-note">
-                                    <p>For faster and more reliable communication, email me at <a href="mailto:anupbhattarai46@gmail.com">anupbhattarai46@gmail.com</a> or call <a href="tel:9763683873">9763683873</a>.</p>
+                                    <p>For faster and more reliable communication, email me at <a href="mailto:anupbhattarai46@gmail.com" style="color:#fff;">anupbhattarai46@gmail.com</a> or call <a href="tel:9763683873" style="color:#fff;">9763683873</a>.</p>
                                 </div>
                         </form>
                 </div> 
@@ -178,12 +200,23 @@
                         class="fab fa-instagram"></i></a>
                 <a href="https://github.com/gaurav0xA1" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <p>&copy; 2025 Anup Bhattarai</p>
+            <p style="text-align:center;margin-top:24px;">&copy; <span id="year"></span> Anup Bhattarai</p>
         </footer>
     </div>
 
 
+    <!-- Back to Top Button -->
+        <button id="backToTop" title="Back to top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:999;background:rgba(30,30,30,0.95);color:#bbb;border:2px solid #444;border-radius:50%;width:48px;height:48px;font-size:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.18);cursor:pointer;transition:background 0.2s,border 0.2s;display:flex;align-items:center;justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+        </button>
     <script src="script.js"></script>
+    <script>
+      // Automatically set year in footer
+      document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+      });
+    </script>
 </body>
 
 </html>
