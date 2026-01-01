@@ -19,11 +19,16 @@
         <meta name="twitter:title" content="Web Developer in Nepal | Kathmandu | Lalitpur | Anup Bhattarai Portfolio" />
         <meta name="twitter:description" content="Portfolio of Anup Bhattarai, a web developer based in Nepal (Kathmandu, Lalitpur). Specialized in modern web development, fullstack projects, and client solutions." />
         <meta name="twitter:image" content="https://anupbhattarai2.com.np/images/og-image.jpg" />
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Defer non-critical scripts -->
+    <script src="script.js" defer></script>
         <!-- Structured Data for SEO (JSON-LD) -->
         <script type="application/ld+json">
         {
@@ -106,7 +111,7 @@
         <section class="about-section" id="about" style="margin-top:0;">
             <div class="about-flex about-suzan-style">
                 <div class="about-text-col about-suzan-text">
-                    <div class="about-intro-label">Let me introduce myself,</div>
+                    <div class="about-intro-label">Let me introduce myself</div>
                     <h2 class="about-main-heading">ABOUT ME</h2>
                     <p class="about-location-seo" style="display:none;">I am a web developer based in Nepal, serving clients in Kathmandu, Lalitpur, and across the country. If you are looking for a web developer in Nepal, Kathmandu, or Lalitpur, you are in the right place.</p>
                     <div class="about-main-desc">
@@ -120,7 +125,7 @@
                     </div>
                 </div>
                 <div class="about-img-col about-suzan-img">
-                    <img src="images/projects/photo.jpeg" alt="Anup Bhattarai - Web Developer in Nepal, Kathmandu, Lalitpur" class="about-img about-img-square">
+                    <img src="images/projects/photo.jpeg" alt="Anup Bhattarai - Web Developer in Nepal, Kathmandu, Lalitpur" class="about-img about-img-square" loading="lazy" width="420" height="320">
                 </div>
             </div>
         </section>
@@ -128,26 +133,24 @@
         <!-- Tech Stack (moved below about) -->
         <section class="services-section" id="services">
             <div class="services-header">
-                <div style="text-align:center; margin-bottom: 2rem;">
-                    <div style="font-size:1.3rem; color:#fff; opacity:0.7;">What i can do for you?</div>
-                    <h2 style="font-size:3rem; font-weight:800; color:#fff; margin:0;">SERVICES</h2>
-                </div>
+                <p class="services-subtitle">What I can do for you</p>
+                <h2 class="services-title">SERVICES</h2>
             </div>
-            <div class="services-cards" style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
-                <div class="service-card" style="background:#232224; border-radius:2.5rem 2.5rem 2.5rem 2.5rem/2rem 2.5rem 2.5rem 2.5rem; padding:2.5rem 2rem; width:320px; max-width:90vw; color:#fff; text-align:center;">
-                    <div style="font-size:2.5rem; margin-bottom:1rem;">&lt;&gt;</div>
-                    <h3 style="font-size:2rem; font-weight:700; margin-bottom:1rem;">Web Dev</h3>
-                    <div style="font-size:1.1rem; opacity:0.85;">I can develop the websites. I love to make highly interactive website with MERN stack.</div>
+            <div class="services-cards">
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">&lt;&gt;</div>
+                    <h3 class="service-title">Web Dev</h3>
+                    <p class="service-desc">I develop interactive websites using modern frameworks like MERN stack, delivering high-performance solutions.</p>
                 </div>
-                <div class="service-card" style="background:#232224; border-radius:2.5rem 2.5rem 2.5rem 2.5rem/2rem 2.5rem 2.5rem 2.5rem; padding:2.5rem 2rem; width:320px; max-width:90vw; color:#fff; text-align:center;">
-                    <div style="font-size:2.5rem; margin-bottom:1rem;"><i class="fas fa-paint-brush"></i></div>
-                    <h3 style="font-size:2rem; font-weight:700; margin-bottom:1rem;">UI/UX</h3>
-                    <div style="font-size:1.1rem; opacity:0.85;">I design modern, user-friendly interfaces and prototypes using Figma for web and mobile apps.</div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="service-title">UI/UX</h3>
+                    <p class="service-desc">I design modern, user-friendly interfaces and prototypes using Figma for web and mobile apps.</p>
                 </div>
-                <div class="service-card" style="background:#232224; border-radius:2.5rem 2.5rem 2.5rem 2.5rem/2rem 2.5rem 2.5rem 2.5rem; padding:2.5rem 2rem; width:320px; max-width:90vw; color:#fff; text-align:center;">
-                    <div style="font-size:2.5rem; margin-bottom:1rem;"><i class="fas fa-brain"></i></div>
-                    <h3 style="font-size:2rem; font-weight:700; margin-bottom:1rem;">AI solution</h3>
-                    <div style="font-size:1.1rem; opacity:0.85;">I can integrate AI approaches and analysis on several sort of datas, as per requirement.</div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+                    <h3 class="service-title">AI Solutions</h3>
+                    <p class="service-desc">I integrate AI approaches and analysis on various types of data, customized to your requirements.</p>
                 </div>
             </div>
         </section>
@@ -190,10 +193,10 @@
             <h2 id="projects" class="proj-head">Projects</h2>
             <div class="projects">
                 <div class="project-card">
-                    <img src="images/projects/sajha-tracker-app.png" alt="Sajha Yatayat Tracker - Project by Web Developer in Nepal" class="project-image">
+                    <img src="images/projects/sajha-tracker-app.png" alt="Sajha Yatayat Tracker - Project by Web Developer in Nepal" class="project-image" loading="lazy" width="400" height="200">
                     <div class="project-actions">
-                        <a href="https://sajha-app-concept.netlify.app/" target="_blank" class="action-btn">Live Demo</a>
-                        <a href="https://github.com/gaurav0xA1/sajha-concept" target="_blank" class="action-btn">GitHub</a>
+                        <a href="https://sajha-app-concept.netlify.app/" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View Sajha Yatayat Tracker live demo">Live Demo</a>
+                        <a href="https://github.com/gaurav0xA1/sajha-concept" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View Sajha Yatayat Tracker source code on GitHub">GitHub</a>
                     </div>
                     <div class="project-content">
                         <h3>Sajha Yatayat Tracker</h3>
@@ -207,10 +210,10 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/projects/todo-app.png" alt="To Do List - Project by Web Developer in Kathmandu, Nepal" class="project-image">
+                    <img src="images/projects/todo-app.png" alt="To Do List - Project by Web Developer in Kathmandu, Nepal" class="project-image" loading="lazy" width="400" height="200">
                     <div class="project-actions">
-                        <a href="https://gaurav0xa1.github.io/todoapp/" target="_blank" class="action-btn">Live Demo</a>
-                        <a href="https://github.com/gaurav0xA1/todoapp" target="_blank" class="action-btn">GitHub</a>
+                        <a href="https://gaurav0xa1.github.io/todoapp/" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View To Do List live demo">Live Demo</a>
+                        <a href="https://github.com/gaurav0xA1/todoapp" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View To Do List source code on GitHub">GitHub</a>
                     </div>
                     <div class="project-content">
                         <h3>To Do List</h3>
@@ -223,10 +226,10 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/projects/chiya-sangam.png" alt="Chiya Sangam Cafe Website - Project by Web Developer in Lalitpur, Nepal" class="project-image">
+                    <img src="images/projects/chiya-sangam.png" alt="Chiya Sangam Cafe Website - Project by Web Developer in Lalitpur, Nepal" class="project-image" loading="lazy" width="400" height="200">
                     <div class="project-actions">
-                        <a href="https://gaurav0xa1.github.io/chiya-sangam/" target="_blank" class="action-btn">Live Demo</a>
-                        <a href="https://github.com/gaurav0xA1/chiya-sangam" target="_blank" class="action-btn">GitHub</a>
+                        <a href="https://gaurav0xa1.github.io/chiya-sangam/" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View Chiya Sangam Cafe Website live demo">Live Demo</a>
+                        <a href="https://github.com/gaurav0xA1/chiya-sangam" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="View Chiya Sangam Cafe Website source code on GitHub">GitHub</a>
                     </div>
                     <div class="project-content">
                         <h3>Chiya Sangam Cafe Website</h3>
@@ -239,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <a href="https://projects.anupbhattarai2.com.np" class="show-more-btn" target="_blank">View All Projects</a>
+            <a href="https://projects.anupbhattarai2.com.np" class="show-more-btn" target="_blank" rel="noopener noreferrer" aria-label="View all projects">View All Projects</a>
 
         </section>
 
@@ -254,13 +257,13 @@
             </div>
             <form id="inline-contact-form" class="inline-contact-form" style="display:none; margin-top:20px;">
                                 <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="company">Company/Organization:</label>
-                                <input type="text" id="company" name="company" placeholder="Optional">
+                                <input type="email" id="email" name="email" required placeholder="Your Email">
+                                <label for="company">Subject:</label>
+                                <input type="text" id="company" name="company" placeholder="Subject">
                                 <label for="message">Message:</label>
-                                <textarea id="message" name="message" rows="4" required></textarea>
+                                <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
                                 <button type="submit">Send</button>
                                 <div class="contact-alt-note">
                                     <p>For faster and more reliable communication, email me at <a href="mailto:anupbhattarai46@gmail.com" style="color:#fff;">anupbhattarai46@gmail.com</a> or call <a href="tel:9763683873" style="color:#fff;">9763683873</a>.</p>
@@ -269,12 +272,10 @@
                 </div> 
             </div>
             <div class="socials">
-                <a href="mailto:anupbhattarai46@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/anup-bhattarai-4bb3b5325/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/_anupbhattarai_/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://github.com/gaurav0xA1" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:anupbhattarai46@gmail.com" aria-label="Send email to Anup Bhattarai"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/anup-bhattarai-4bb3b5325/" target="_blank" rel="noopener noreferrer" aria-label="Visit Anup Bhattarai's LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_anupbhattarai_/" target="_blank" rel="noopener noreferrer" aria-label="Visit Anup Bhattarai's Instagram profile"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/gaurav0xA1" target="_blank" rel="noopener noreferrer" aria-label="Visit Anup Bhattarai's GitHub profile"><i class="fab fa-github"></i></a>
             </div>
             <p style="text-align:center;margin-top:24px;">&copy; <span id="year"></span> Anup Bhattarai</p>
         </footer>
@@ -285,7 +286,6 @@
         <button id="backToTop" title="Back to top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:999;background:rgba(30,30,30,0.95);color:#bbb;border:2px solid #444;border-radius:50%;width:48px;height:48px;font-size:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.18);cursor:pointer;transition:background 0.2s,border 0.2s;display:flex;align-items:center;justify-content:center;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
         </button>
-    <script src="script.js"></script>
     <script>
       // Automatically set year in footer
       document.addEventListener('DOMContentLoaded', function() {

@@ -29,6 +29,22 @@
     align-items: center;
     gap: 2.5rem;
 }
+.services-header {
+    text-align: center;
+    margin-bottom: 0;
+}
+.services-subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+.services-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+}
 .services-cards {
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +64,25 @@
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.service-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.service-desc {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    line-height: 1.6;
 }
 @media (max-width:700px){
     .hero-flex {
@@ -1030,8 +1065,8 @@ footer h2 {
 }
 .inline-contact-form input:focus,
 .inline-contact-form textarea:focus {
-    border-color: #4caf50;
-    box-shadow: 0 0 0 2px rgba(76,175,80,0.15);
+    border-color: #888;
+    box-shadow: 0 0 0 2px rgba(136,136,136,0.18);
 }
 .inline-contact-form textarea {
     min-height: 80px;
