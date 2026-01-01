@@ -7,45 +7,52 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
+<!-- SEO: This sitemap is optimized for web developer in Nepal, Kathmandu, Lalitpur -->
 <url>
   <loc>https://anupbhattarai2.com.np/</loc>
   <lastmod>2025-08-26T05:43:41+00:00</lastmod>
   <priority>1.00</priority>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://anupbhattarai2.com.np/cv.pdf</loc>
   <lastmod>2025-08-26T05:43:41+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/sajha.html</loc>
+  <loc>https://projects.anupbhattarai2.com.np/</loc>
   <lastmod>2025-08-26T05:43:41+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/project2.html</loc>
+  <loc>https://blogs.anupbhattarai2.com.np/</loc>
   <lastmod>2025-08-26T05:43:41+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/feedback.html</loc>
+  <loc>https://sajha.anupbhattarai2.com.np/</loc>
   <lastmod>2025-08-26T05:43:41+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/route.html?route=lagankhel-nayabuspark</loc>
-  <lastmod>2025-08-26T05:43:41+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://www.facebook.com/anup.bhattarai.993913/</loc>
+  <priority>0.32</priority>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/route.html?route=godawari-ratnapark</loc>
-  <lastmod>2025-08-26T05:43:41+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://www.linkedin.com/in/anup-bhattarai-4bb3b5325/</loc>
+  <priority>0.32</priority>
 </url>
 <url>
-  <loc>https://anupbhattarai2.com.np/projects/route.html</loc>
-  <lastmod>2025-08-26T05:43:41+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://www.instagram.com/_anupbhattarai_/</loc>
+  <priority>0.32</priority>
+</url>
+<url>
+  <loc>https://github.com/gaurav0xA1</loc>
+  <priority>0.32</priority>
 </url>
 
 
